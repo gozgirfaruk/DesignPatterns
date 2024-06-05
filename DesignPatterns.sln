@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.34928.147
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChainOfResponsibility", "ChainOfResponsibility\ChainOfResponsibility.csproj", "{78549A80-1D53-45A2-BF0C-6B0D27332457}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChainOfResponsibility", "ChainOfResponsibility\ChainOfResponsibility.csproj", "{78549A80-1D53-45A2-BF0C-6B0D27332457}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CQRSDesign", "CQRSDesign\CQRSDesign.csproj", "{50345364-7A64-4F10-BD29-1570C1AC737F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{78549A80-1D53-45A2-BF0C-6B0D27332457}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{78549A80-1D53-45A2-BF0C-6B0D27332457}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{78549A80-1D53-45A2-BF0C-6B0D27332457}.Release|Any CPU.Build.0 = Release|Any CPU
+		{50345364-7A64-4F10-BD29-1570C1AC737F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50345364-7A64-4F10-BD29-1570C1AC737F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50345364-7A64-4F10-BD29-1570C1AC737F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50345364-7A64-4F10-BD29-1570C1AC737F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

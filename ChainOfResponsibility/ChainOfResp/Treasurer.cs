@@ -8,7 +8,7 @@ namespace ChainOfResponsibility.ChainOfResp
         public override void ProcessRequest(CustomerProcessViewModel request)
         {
             ChainContext _context = new ChainContext();
-            if (request.Amount <= 10000)
+            if (request.Amount <= 50000)
             {
                 CustomerProcess customerProcess = new CustomerProcess();
                 customerProcess.Amount = request.Amount;

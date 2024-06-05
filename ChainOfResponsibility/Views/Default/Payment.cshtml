@@ -1,0 +1,24 @@
+﻿@model CustomerProcessViewModel
+@{
+    Layout = null;
+}
+<link href="~/bootstrap/css/bootstrap.css" rel="stylesheet" />
+
+<form method="post">
+    <div class="form-control">
+        <legend>Kredi Başvuru Formu</legend>
+
+        <div class="mb-3">
+            <label class="form-label">Müşteri Adı Soyadı</label>
+            <input type="text" class="form-control" asp-for="Name">
+        </div>
+
+
+        <div class="mb-3">
+            <label class="form-label">Tutar</label>
+            <input class="form-control" asp-for="Amount">
+        </div>
+
+        <button type="submit" class="btn btn-primary">Telep Oluştur</button>
+    </div>
+</form>

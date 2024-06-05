@@ -1,0 +1,36 @@
+﻿@using CQRSDesign.CQRS.Results
+@model GetProductByIdQueryResult
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<body>
+
+    <h2>Ürün Güncelleme Sayfası</h2>
+
+    <form method="post" class="form-control">
+
+        <input type="hidden"  asp-for="ProductID" class="form-control"><br>
+
+        <label class="form-label" >Ürün Adı:</label><br>
+        <input type="text" id="fname" asp-for="Name" class="form-control"><br>
+
+        <label class="form-label">Ürün Açıklama:</label><br>
+        <input type="text" id="lname" asp-for="Description"><br><br>
+
+        <label class="form-label">Ürün Fiyat:</label><br>
+        <input  id="lname" asp-for="Price"><br><br>
+
+        <label class="form-label">Ürün Stok:</label><br>
+        <input  id="lname" asp-for="Strock"><br><br>
+
+        <input type="submit" value="Güncelle">
+    </form>
+
+
+</body>
+</html>
+
+

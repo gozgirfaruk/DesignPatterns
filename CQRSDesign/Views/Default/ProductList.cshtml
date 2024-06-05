@@ -1,0 +1,54 @@
+﻿@using CQRSDesign.CQRS.Results
+@model List<GetProductQueryResult>
+@{
+    Layout = null;
+}
+<link href="~/bootstrap/css/bootstrap.css" rel="stylesheet" />
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Ürün Listesi</h2>
+
+    <table>
+        <tr>
+            <th>#</th>
+            <th>Ürün Adı</th>
+            <th>Ücret (₺)</th>
+            <th>Stok</th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.ProductID</td>
+                <td>@item.Name</td>
+                <td>@item.Price</td>
+                <td>@item.Strock</td>
+                <td><a href="/Default/DeleteProduct/@item.ProductID" class="btn btn-danger">Sil</a></td>
+                <td><a href="/Default/GetProduct/@item.ProductID" class="btn btn-warning">Güncelle</a></td>
+            </tr>
+        }
+    </table>
+    <a href="/Default/CreateProduct/" class="btn btn-dark">Yeni Ürün Girişi</a>
+</body>
+</html>
+
