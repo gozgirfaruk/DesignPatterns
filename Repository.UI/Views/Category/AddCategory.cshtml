@@ -1,0 +1,14 @@
+﻿@model Repository.Entity.Concrete.Category
+@{
+    ViewData["Title"] = "AddCategory";
+}
+
+<h1>Yeni Kategori Giriş</h1>
+
+
+<form method="post">
+    <label>Kategori Adı</label>
+    <input type="text" class="form-control" asp-for="Name"/>
+    <br />
+    <button type="submit" class="btn-outline-secondary">Ekle</button>
+</form> 

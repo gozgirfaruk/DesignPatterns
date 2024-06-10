@@ -1,0 +1,26 @@
+﻿@model List<Repository.Entity.Concrete.Category>
+@{
+    ViewData["Title"] = "CategoryList";
+}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Kategori</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var item in Model)
+        {
+             <tr>
+            <th scope="row">@item.CategoryID</th>
+            <td>@item.Name</td>
+            <td><a href="/Category/EditCategory/@item.CategoryID" class="btn btn-dark" >Güncelle</a></td>
+            <td><a href="/Category/DeleteCategory/@item.CategoryID" class="btn btn-info" >Sil</a></td>
+        </tr>
+        }
+       
+    </tbody>
+</table>
+<a href="/Category/AddCategory" class="btn btn-outline-success">Yeni Kayıt</a>

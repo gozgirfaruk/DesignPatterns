@@ -1,0 +1,29 @@
+﻿@model Mediator.UI.MediatorPatern.Results.GetProductByIdQueryResult
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<body>
+
+    <h2>Ürün Detay</h2>
+
+    <form method="post">
+        <label>Ürün ID</label><br>
+        <input type="text" id="fname" asp-for="ProductID"><br>
+
+        <label >Ürün Adı</label><br>
+        <input type="text" id="fname" asp-for="Name"><br>
+
+        <label >Stok</label><br>
+        <input type="text" id="lname" asp-for="Stock"><br><br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <p>If you click the "Submit" button, the form-data will be sent to a page called "/action_page.php".</p>
+
+</body>
+</html>
+
+

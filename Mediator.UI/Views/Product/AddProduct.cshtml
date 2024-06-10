@@ -1,0 +1,26 @@
+﻿@model Mediator.UI.MediatorPatern.Commands.CreateProductCommand
+@{
+    ViewData["Title"] = "AddProduct";
+}
+
+<h1>Ürün Ekleme Sayfası</h1>
+
+<form method="post">
+   
+    <label>Ürün Adı</label>
+    <input class="form-control" asp-for="Name" />
+    <br />
+    <label>Kategori Adı</label>
+    <input class="form-control" asp-for="Category" />
+    <br />
+    <label>Ürün Stok</label>
+    <input class="form-control" asp-for="Stock" />
+    <br />
+    <label>Ürün Fiyat</label>
+    <input class="form-control" asp-for="Price" />
+    <br />
+    <label>Stok Türü</label>
+    <input class="form-control" asp-for="StockType" />
+    <br />
+    <button class="btn btn-dark">Ürün Ekle</button>
+</form>

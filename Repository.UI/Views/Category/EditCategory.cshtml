@@ -1,0 +1,17 @@
+﻿@model Repository.Entity.Concrete.Category
+@{
+    ViewData["Title"] = "EditCategory";
+}
+
+<h2>Kategori Güncelleme Sayfası</h2>
+
+<form method="post">
+    
+    <br />
+    <input type="hidden" asp-for="CategoryID"/>
+    <label>Kategori Adı</label>
+    <input  type="text" class="form-control" asp-for="Name"/>
+    <br />
+    <button type="submit" class="btn btn-primary">Güncelle</button>
+</form>
+

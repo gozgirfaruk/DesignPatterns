@@ -1,0 +1,28 @@
+﻿@model Mediator.UI.MediatorPatern.Results.UpdateProductByIdQueryResult
+@{
+    ViewData["Title"] = "UpdateProduct";
+}
+
+<h1>Ürün Güncelleme Sayfası</h1>
+
+<form method="post">
+    <label>Ürün ID</label>
+    <input type="text" asp-for="ProductID" class="form-control" readonly/>
+    <br />
+    <label>Ürün Adı</label>
+    <input class="form-control" asp-for="Name"/>
+    <br />
+    <label>Kategori Adı</label>
+    <input class="form-control" asp-for="Category" />
+    <br />
+    <label>Ürün Stok</label>
+    <input class="form-control" asp-for="Stock" />
+    <br />
+    <label>Ürün Fiyat</label>
+    <input class="form-control" asp-for="Price" />
+    <br />
+    <label>Stok Türü</label>
+    <input class="form-control" asp-for="StockType" />
+    <br />
+    <button class="btn btn-dark">Güncelle</button>
+</form>
