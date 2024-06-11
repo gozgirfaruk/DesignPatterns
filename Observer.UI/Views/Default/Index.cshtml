@@ -1,0 +1,38 @@
+﻿@model RegisterViewModel
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h3>Yeni Kullanıcı Oluşturma Sayfası</h3>
+
+<form method="post">
+    <label>Adınız</label>
+    <input asp-for="Name" class="form-control"/>
+    <br />
+
+    <label>Soyadınız</label>
+    <input asp-for="Surname" class="form-control" />
+    <br />
+
+    <label>Mail Adresiniz</label>
+    <input type="email" asp-for="Mail" class="form-control" />
+    <br />
+
+    <label>Kullanıcı Adı</label>
+    <input asp-for="UserName" class="form-control" />
+    <br />
+
+    <label>Şifre</label>
+    <input type="password" asp-for="Password" class="form-control" />
+    <br />
+
+    <label>Şehir</label>
+    <input type="text" asp-for="City" class="form-control" />
+    <br />
+
+    <label>İlçe</label>
+    <input type="text" asp-for="District" class="form-control" />
+    <br />
+
+    <button type="submit" class="btn btn-secondary">Kayıt Ol</button>
+</form>
