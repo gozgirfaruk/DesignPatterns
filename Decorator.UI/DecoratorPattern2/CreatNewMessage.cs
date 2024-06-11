@@ -4,16 +4,11 @@ namespace Decorator.UI.DecoratorPattern2
 {
     public class CreatNewMessage : ISendMessage
     {
-        private readonly DecoContext _context;
-
-
-        public CreatNewMessage(DecoContext context)
-        {
-            _context = context;
-        }
+        
 
         public void SendMessage(iMessage message)
         {
+            using var _context = new DecoContext();
             _context.iMessages.Add(message);
             _context.SaveChanges();
         }

@@ -4,15 +4,13 @@ namespace Decorator.UI.DecoratorPattern2
 {
     public class EncryptoBySubjectDecorator : Decorator
     {
-        private readonly ISendMessage _sendMessage;
-        private readonly DecoContext _decoContext;
-        public EncryptoBySubjectDecorator(ISendMessage sendMessage, DecoContext decoContext) : base(sendMessage)
+        public EncryptoBySubjectDecorator(ISendMessage sendMessage) : base(sendMessage)
         {
-            _sendMessage = sendMessage;
-            _decoContext = decoContext;
         }
+
         public void SendMessageByEncryptoSubject(iMessage message)
         {
+            using var _decoContext = new DecoContext();
             string data = "";
             data = message.Subject;
             char[] chars = data.ToCharArray();

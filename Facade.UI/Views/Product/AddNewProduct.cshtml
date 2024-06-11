@@ -1,0 +1,29 @@
+﻿@model Facade.UI.DAL.Product
+@{
+    ViewData["Title"] = "AddNewCustomer";
+}
+
+<h1>Yeni Ürün Girişi</h1>
+
+<div class="container">
+
+    <form method="post">
+        <label>Ürün Adı</label>
+        <input type="text" asp-for="Name" class="form-control" />
+        <br />
+
+        <label>Stok</label>
+        <input type="number" asp-for="Stock" class="form-control" />
+        <br />
+
+        <label>Fiyat</label>
+        <input type="number" asp-for="Price" class="form-control" />
+        <br />
+        <label>Kategori</label>
+        <input type="text" asp-for="Category" class="form-control" />
+        <br />
+        <button class="btn btn-info">Ekle</button>
+
+    </form>
+</div>
+

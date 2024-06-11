@@ -1,0 +1,30 @@
+﻿@model List<Facade.UI.DAL.Product>
+@{
+    ViewData["Title"] = "ProductList";
+}
+
+<h1>Müşteri Listesi</h1>
+
+<div class="container">
+    <table class="table table-hover">
+        <tr>
+            <th>#</th>
+            <th>Adı</th>
+            <th>Soyadı</th>
+            <th>Şehir</th>
+
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.ProductID</td>
+                <td>@item.Name</td>
+                <td>@item.Stock</td>
+                <td>@item.Price</td>
+                <td><a href="#" class="btn btn-danger">Sil</a></td>
+                <td><a href="#" class="btn btn-info">Güncelle</a></td>
+            </tr>
+        }
+    </table>
+    <td><a href="/Product/AddNewProduct" class="btn btn-primary">Yeni Ürün</a></td>
+</div>

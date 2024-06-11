@@ -11,6 +11,10 @@ namespace Observer.UI.ObserverPattern
             _observers = new List<IObserver>();
         }
 
+        public ObserverObject()
+        {
+        }
+
         public void RegisterObserver(IObserver observer)
         {
             _observers.Add(observer);

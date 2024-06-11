@@ -4,17 +4,17 @@ namespace Observer.UI.ObserverPattern
 {
     public class CreateMagazineAnnouncement : IObserver
     {
-        private readonly IServiceProvider _serviceProvider;
-        private readonly ObserverContext _observerContext;
+        private readonly IServiceProvider serviceProvider;
 
-      
-        public CreateMagazineAnnouncement(ObserverContext observerContext, IServiceProvider serviceProvider)
+        public CreateMagazineAnnouncement(IServiceProvider serviceProvider)
         {
-            _observerContext = observerContext;
-            _serviceProvider = serviceProvider;
+            this.serviceProvider = serviceProvider;
+         
         }
+
         public void CreateNewUser(AppUser appUser)
         {
+            using var _observerContext = new ObserverContext();
             _observerContext.UserProcesses.Add(new UserProcess
             {
                 Name = appUser.Name + "" + appUser.Surname,

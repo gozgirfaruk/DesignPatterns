@@ -7,14 +7,14 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<ObserverContext>();
 builder.Services.AddIdentity<AppUser,AppRole>().AddEntityFrameworkStores<ObserverContext>();
-//builder.Services.AddSingleton<ObserverObject>(sp =>
-//{
-//    ObserverObject observerObject = new();
-//    observerObject.RegisterObserver(new CreateWelcomeMessage(sp));
-//    observerObject.RegisterObserver(new CreateMagazineAnnouncement(sp));
-//    observerObject.RegisterObserver(new CreateDiscountCode(sp));
-//    return observerObject;
-//});
+builder.Services.AddSingleton<ObserverObject>(serviceProvider =>
+{
+    ObserverObject observerObject = new();
+    observerObject.RegisterObserver(new CreateWelcomeMessage(serviceProvider));
+    observerObject.RegisterObserver(new CreateMagazineAnnouncement(serviceProvider));
+    observerObject.RegisterObserver(new CreateDiscountCode(serviceProvider));
+    return observerObject;
+});
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
